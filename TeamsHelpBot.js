@@ -73,6 +73,10 @@ handler.AddCommand(new Command("test", (caller, args) => {
     return `Hello, ${mention(caller)}! You typed: ${args.join(String(" "))}`;
 }));
 
+handler.AddCommand(new Command("hello", (caller, args) => {
+    return `Hello, ${mention(caller)}!`;
+}));
+
 http.createServer((request, response) => {
     var payload = '';
     request.on('data', function (data) {

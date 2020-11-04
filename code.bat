@@ -1,0 +1,2 @@
+node TeamsHelpBot.js
+pause
