@@ -1,0 +1,69 @@
+{
+  "action": null,
+  "attachmentLayout": null,
+  "attachments": [
+    {
+      "contentType": "text/html",
+      "contentUrl": null,
+      "content": "<div><div><span itemscope=\"\" itemtype=\"http://schema.skype.com/Mention\" itemid=\"0\">helper</span>yo</div>\n</div>",
+      "name": null,
+      "thumbnailUrl": null
+    }
+  ],
+  "channelData": {
+    "teamsChannelId": "19:e34f5631dfa14af4a7c526ca2f4a37ab@thread.tacv2",
+    "teamsTeamId": "19:e34f5631dfa14af4a7c526ca2f4a37ab@thread.tacv2",
+    "channel": {
+      "id": "19:e34f5631dfa14af4a7c526ca2f4a37ab@thread.tacv2"
+    },
+    "team": {
+      "id": "19:e34f5631dfa14af4a7c526ca2f4a37ab@thread.tacv2"
+    },
+    "tenant": {
+      "id": "1e090ae7-481e-423d-ae9d-aee6a07a2157"
+    }
+  },
+  "channelId": "msteams",
+  "code": null,
+  "conversation": {
+    "isGroup": true,
+    "id": "19:e34f5631dfa14af4a7c526ca2f4a37ab@thread.tacv2;messageid=1604440319191",
+    "name": null,
+    "conversationType": "channel",
+    "tenantId": "1e090ae7-481e-423d-ae9d-aee6a07a2157"
+  },
+  "entities": [
+    {
+      "type": "clientInfo",
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Windows"
+    }
+  ],
+  "from": {
+    "id": "29:1YGNXhI0aWlROlKvq2MFT7rg2Sm-t8OCILZRipFlDHFlVs_WOF9rqS61FhLklP4bFiwIi7BOJ1i2Xqi_HM_906w",
+    "name": "16mcuddi",
+    "aadObjectId": "8db46cdf-3cfa-40b3-b4f1-6aac092449ac"
+  },
+  "historyDisclosed": null,
+  "id": "1604440319191",
+  "inputHint": null,
+  "localTimestamp": "2020-11-03T21:51:59.2366426+00:00",
+  "locale": "en-US",
+  "membersAdded": [],
+  "membersRemoved": [],
+  "name": null,
+  "recipient": null,
+  "relatesTo": null,
+  "replyToId": null,
+  "serviceUrl": "https://smba.trafficmanager.net/uk/",
+  "speak": null,
+  "suggestedActions": null,
+  "summary": null,
+  "text": "<at>helper</at>yo\n",
+  "textFormat": "plain",
+  "timestamp": "2020-11-03T21:51:59.2366426Z",
+  "topicName": null,
+  "type": "message",
+  "value": null
+}
