@@ -1,8 +1,8 @@
 const crypto = require('crypto');
-const http = require('http');
-const jsdom = require("jsdom");
+const http = require('https');
+const { htmlToText } = require('html-to-text');
 
-const sharedSecret = "UsQPrOXrqhJ3reozBoryS/0Ur+9lZnAVX+0gvOvgUJM=";
+const sharedSecret = "46JA2dljC+rYiMfz5729FI6gaTxiHrrZ3o6g5BcKYhI=";
 const bufSecret = Buffer.from(sharedSecret, "base64");
 
 const prefix = "help-";
@@ -10,7 +10,8 @@ const name = "helper";
 
 function extractContent(html) {
     var html_text = `<!DOCTYPE html><p>${String(html).trim()}</p>`
-    return (new jsdom.JSDOM(html_text)).window.document.querySelector("p").textContent;
+    //return (new jsdom.JSDOM(html_text)).window.document.querySelector("p").textContent;
+    return htmlToText(html_text);
 }
 
 function mention(who){
@@ -58,6 +59,12 @@ class Handler {
 
     AddCommand(cmd){
         this.cmds[String(cmd.name).toLowerCase()] = cmd;
+    };
+    
+    AddCommands(cmds){
+        cmds.forEach((command) => {
+            this.AddCommand(command);
+        })
     }
 
     constructor(){
@@ -69,9 +76,11 @@ class Handler {
 
 let handler = new Handler();
 
-handler.AddCommand(new Command("test", (caller, args) => {
-    return `Hello, ${mention(caller)}! You typed: ${args.join(String(" "))}`;
-}));
+handler.AddCommands([
+    (new Command("test", (caller, args) => {
+        return `Hello, ${mention(caller)}! You typed: ${args.join(String(" "))}`;
+    }))
+]);
 
 handler.AddCommand(new Command("hello", (caller, args) => {
     return `Hello, ${mention(caller)}!`;
@@ -116,6 +125,6 @@ http.createServer((request, response) => {
             response.end("Error: " + err + "\n" + err.stack);
         }
     });
-}).listen(8000);
-
-console.log('Listening on port %s', 8000);
+}).listen(8000, ()=>{
+    console.log('Listening on port %s', 8000);
+});
