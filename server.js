@@ -29,8 +29,7 @@ app.get("/", (request, response) => {
             }
         });
 
-        response.send(Valid);
-
+        response.send(Valid); // Sends response back to Roblox;
     }else{
         response.send(FALSE); // Not in the server or an invalid request.
     }
