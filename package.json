@@ -1,0 +1,27 @@
+{
+    "//1": "Uses discord-js to do thingy yes",
+    "name": "booga-booga-twitch-communication",
+    "version": "0.0.1",
+    "description": "Booga hat bot, it verifies the twitch subscriber thingy doo for twitch subs!!",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "discord.js": "12.5.1"
+    },
+    "engines": {
+      "node": "12.x"
+    },
+    "repository": {
+      "url": "https://glitch.com/edit/#!/booga-booga-twich-communication"
+    },
+    "license": "MIT",
+    "keywords": [
+      "node",
+      "glitch",
+      "express"
+    ]
+  }
+  
